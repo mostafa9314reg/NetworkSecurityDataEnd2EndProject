@@ -13,9 +13,11 @@ uri = os.getenv("Mongo_Uri")
 
 try:
     #client = MongoClient(uri, serverSelectionTimeoutMS=5000)
-    client = MongoClient(uri, tls=True, tlsAllowInvalidCertificates=True, serverSelectionTimeoutMS=5000)
+    #client = MongoClient(uri, tls=True, tlsAllowInvalidCertificates=True, serverSelectionTimeoutMS=5000)
+    client = MongoClient('mongodb://localhost:27017/')
 
-    client.server_info()  # forces a real DB call, no ICMP involved
+    #client.server_info()  # forces a real DB call, no ICMP involved
+    client.admin.command('ping')
     print("✅ Successfully connected to MongoDB Atlas")
 except Exception as e:
     print("❌ Could not connect:", e)

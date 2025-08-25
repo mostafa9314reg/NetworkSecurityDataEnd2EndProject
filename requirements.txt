@@ -7,4 +7,6 @@ pymongo[srv]==3.11
 dotenv
 requests
 scikit-learn
+dill
+pyaml
 #-e .
