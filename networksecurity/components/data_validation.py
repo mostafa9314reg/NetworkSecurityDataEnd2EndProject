@@ -9,13 +9,10 @@ import pandas as pd
 import os,sys,yaml
 
 
-class 
 
 
+class DataValidation:
 
-
-
-DataValidation:
     def __init__(self,data_ingestion_artifact:DataIngestionArtifact,
                  data_validation_config:DataValidationConfig):
         
